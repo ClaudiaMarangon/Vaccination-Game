@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+
+    {% if same_dec%}
+        Both the other player chose to {{ act1_c }}, therefore your payoff is {{ player.payoff }}.
+    {% else %}
+        Player 1 chose to {{ act1_c }} while Player 2 chose to {{ act2_c }}, therefore your payoff is {{ player.payoff }}.
+    {% endif %}
+
+    {% next_button %}
+{% endblock %}

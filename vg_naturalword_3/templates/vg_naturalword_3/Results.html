@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+
+    {% if same_dec%}
+        You both chose to {{ act1_c }}, therefore your payoff is {{ player.payoff }}.
+    {% elif diff_dec and act1 %}
+        You chose to {{ act1_c }} while your partner chose to {{ act2_c }}, therefore your payoff is {{ player.payoff }}.
+    {% elif diff_dec and act2 %}
+        You chose to {{ act2_c }} while your partner chose to {{ act1_c }}, therefore your payoff is {{ player.payoff }}.
+    {% endif %}
+
+    {% next_button %}
+{% endblock %}
+
+
+
+
+

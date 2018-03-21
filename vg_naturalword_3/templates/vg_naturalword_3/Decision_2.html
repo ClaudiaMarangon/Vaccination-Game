@@ -1,0 +1,54 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Cooperate or not?
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'global/matrix.css' %}" />
+
+    <style>
+        .highlight-row-on-hover:hover td {
+            background-color: #fcf8e3;
+        }
+        th {
+            text-align: center;
+        }
+    </style>
+
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        The payoffs for you and your partner are shown in the table below. Now pick whether you wish to perform the task
+        or not:
+    </p>
+
+    <div class="form-group required">
+        <table class="table table-bordered text-center" style="width: auto; margin: auto">
+            <tr>
+                <th colspan="2" rowspan="2"></th>
+                <th colspan="2">Your Partner</th>
+            </tr>
+            <tr>
+                <th>Cooperate</th>
+                <th>Defect</th>
+            </tr>
+            <tr class="highlight-row-on-hover">
+                <th rowspan="2" style="vertical-align: middle">You</th>
+                <td><button name="choice_act2" value="Cooperate" class="btn btn-primary btn-large">I will cooperate</button></td>
+                <td>{{ Constants.vac_pay}}, {{ Constants.vac_pay}}, {{ Constants.vac_pay}}</td>
+                <td>{{ Constants.vac_novac}}, {{ Constants.expl}}, {{ Constants.vac_novac}}</td>
+            </tr>
+            <tr class="highlight-row-on-hover">
+                <td><button name="choice_act2" value="Defect" class="btn btn-primary btn-large">I will not cooperate</button></td>
+                <td>{{ Constants.expl}}, {{ Constants.vac_pay}}, {{ Constants.vac_pay}}</td>
+                <td>{{ Constants.no_vac}}, {{ Constants.no_vac}}, {{ Constants.no_vac_pp}}</td>
+            </tr>
+        </table>
+    </div>
+    
+    {% next_button %}
+{% endblock %}

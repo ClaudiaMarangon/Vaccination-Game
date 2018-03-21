@@ -1,0 +1,40 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Page title
+{% endblock %}
+
+{% block content %}
+    <p>
+        You are player D in the following game. You have no choice in this game. Your payoff is the third number in each
+        cell, in <font color ='blue'>blue</font>. Please tick the box below to tell us that you have understood your role in the game.
+    </p>
+
+    <div>
+    <table class='table table-bordered text-center'
+           style='width: auto; margin: auto'>
+        <tr>
+            <th colspan=2 rowspan=2></th>
+            <th colspan=2>Player 2</th>
+        </tr>
+        <tr>
+            <th>Cooperate</th>
+            <th>Do not <br /> Cooperate</th>
+        </tr>
+        <tr>
+            <th rowspan=2 style="vertical-align: middle">Player 1</th>
+            <th>Cooperate</th>
+            <td>5, 5, <font color ='blue'>5</font></td>
+            <td>4, 8, <font color ='blue'>4</font></td>
+        </tr>
+        <tr>
+            <th>Do not <br /> Cooperate</th>
+            <td>8, 4, <font color ='blue'>4</font></td>
+            <td>2, 2, <font color ='blue'>0</font></td>
+        </tr>
+    </table>  </div>
+
+    <p> I understand that I have no choice in this game <button class="btn btn-primary btn-large"></button></p>
+
+{% endblock %}
