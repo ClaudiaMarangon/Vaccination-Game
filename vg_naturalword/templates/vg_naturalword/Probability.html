@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Probability Guess
+{% endblock %}
+
+{% block content %}
+    <p>What is the probability with which you think the other agent is going to cooperate?</p>
+
+    {% formfield player.prob %}
+
+    {% next_button %}
+{% endblock %}
+

@@ -3,6 +3,10 @@ from . import models
 from ._builtin import Page, WaitPage
 from .models import Constants
 
+class Probability(Page):
+    form_model = models.Player
+    form_fields = ['prob']
+    pass
 
 class Decision(Page):
     def is_displayed(self):
@@ -65,6 +69,7 @@ class Results_p(Page):
 
 
 page_sequence = [
+    Probability,
     Decision,
     Decision_2,
     Decision_p,

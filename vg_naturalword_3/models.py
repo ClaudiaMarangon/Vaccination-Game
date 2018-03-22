@@ -58,6 +58,12 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
 
+    prob = models.FloatField(
+        verbose_name = 'Please, enter your guess for the probability:',
+        max = 100,
+        min = 0,
+    )
+
     def role(self):
         if self.id_in_group == self.group.pass_p1:
             return 'Passive'

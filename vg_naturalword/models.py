@@ -36,6 +36,13 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
 
+    prob = models.FloatField(
+        verbose_name = 'Please, enter your guess for the probability:',
+        max = 100,
+        min = 0,
+
+    )
+
     g1_choice = models.StringField(
         choices=['Cooperate','Defect'],
         widget=widgets.RadioSelect
