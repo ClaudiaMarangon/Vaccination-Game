@@ -1,0 +1,65 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Welcome!
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        This experiment consists of a number of stages in which you can earn experimental tokens. At the end of the experiment,
+        the tokens will be exchanged for real money at a rate of #####. The experiment is expected to last about 1 hour.
+    </p>
+
+    <p>
+        In this experiment, one game you are going to play is with two players, Player A and Player B and two choices,
+        Vaccinate and Don’t vaccinate (shortened to “Don’t”). You will be allocated the role of either Player A or
+        Player B. Then both you and the other player will select Vaccinate or Don’t. The choices will be made independently
+        and at the same time. Your payoff will depend on both your and your opponent’s choice.
+    </p>
+
+    <p>
+        These payoffs are displayed in the table below, in which the amount to the left in each cell is the payoff of
+        Player A and the payoff to the right is that of Player B.
+    </p>
+
+    <table class='table table-bordered text-center'
+           style='width: auto; margin: auto'>
+        <tr>
+            <th colspan=2 rowspan=2></th>
+            <th colspan=2>Player B</th>
+        </tr>
+        <tr>
+            <th>Vaccinate</th>
+            <th>Don't</th>
+        </tr>
+        <tr>
+            <th rowspan=2 style="vertical-align: middle">Player A</th>
+            <th>Vaccinate</th>
+            <td>5, 5</td>
+            <td>5, 10</td>
+        </tr>
+        <tr>
+            <th>Don't</th>
+            <td>10, 5</td>
+            <td>2, 2</td>
+        </tr>
+    </table>
+
+    <p>
+        For example, if Player A selects Don’t while Player B selects Vaccinate, then A receives 10 tokens and B
+        receives 5 tokens.
+    </p>
+
+    <p>
+        Each player will choose whether they want to play Vaccinate or Don’t, and then the computer will match the
+        answers and calculate the appropriate payoffs. You will play the game above several times, in different roles,
+        and against different partners. Your payoffs for each round will be added and will contribute to your final
+        earnings at the end of the experiment.
+    </p>
+
+
+    {% next_button %}
+{% endblock %}
+

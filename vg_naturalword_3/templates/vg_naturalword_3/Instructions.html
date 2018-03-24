@@ -1,0 +1,60 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+   Three Players Game
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        In this part of the experiment you will be allocated to the role of one of the three players, A, B, or C.
+        Then Players A and B will select Choice 1 or Choice 2. The choices will be made independently and at the same time.
+        Your payoff will depend on both your and your opponent’s choice. Player C has no action in this game, but note
+        that his/her payoff depends on the other players' actions.
+    </p>
+
+    <p>
+        These payoffs are displayed in the table below, in which the amount to the left in each cell is the payoff of
+        Player A, in the middle is the payoff of Player B and on the right is the payoff of Player C.
+    </p>
+
+    <table class='table table-bordered text-center'
+           style='width: auto; margin: auto'>
+        <tr>
+            <th colspan=2 rowspan=2></th>
+            <th colspan=2>Player B</th>
+        </tr>
+        <tr>
+            <th>Choice 1</th>
+            <th>Choice 2</th>
+        </tr>
+        <tr>
+            <th rowspan=2 style="vertical-align: middle">Player A</th>
+            <th>Choice 1</th>
+            <td>5, 5, 5</td>
+            <td>5, 10, 2</td>
+        </tr>
+        <tr>
+            <th>Choice 2</th>
+            <td>10, 5, 2</td>
+            <td>2, 2, 0</td>
+        </tr>
+    </table>
+
+    <p>
+        For example, if Player A selects Choice 2 while Player B selects Choice 1, then A receives 10 tokens, B receives
+        5 tokens and C receives 2 tokens.
+    </p>
+
+    <p>
+        Players A and B will choose whether they want to play Choice 1 or Choice 2, and then the computer will match the
+        answers and calculate the appropriate payoffs. You will play the game above several times, in different roles,
+        and against different partners. Your payoffs for each round will be added and will contribute to your final
+        earnings at the end of the experiment.
+    </p>
+
+
+    {% next_button %}
+{% endblock %}
+

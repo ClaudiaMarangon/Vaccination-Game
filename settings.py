@@ -103,8 +103,8 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
     {
-        'name': 'vg_naturalword',
-        'display_name': "Vaccination Game - Natural Wording 2 Players",
+        'name': 'vg_neutralword',
+        'display_name': "Vaccination Game - Neutral Wording 2 Players",
         'num_demo_participants': 2,
         'app_sequence': [
             'vg_naturalword',
@@ -112,8 +112,8 @@ SESSION_CONFIGS = [
     },
 
     {
-        'name': 'vg_naturalword_3',
-        'display_name': "Vaccination Game - Natural Wording 3 Players",
+        'name': 'vg_neutralword_3',
+        'display_name': "Vaccination Game - Neutral Wording 3 Players",
         'num_demo_participants': 3,
         'app_sequence': [
             'vg_naturalword_3',
