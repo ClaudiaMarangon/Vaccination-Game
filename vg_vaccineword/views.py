@@ -12,6 +12,10 @@ class Instructions(Page):
 class MyPage(Page):
     pass
 
+class Probability(Page):
+    form_model = models.Player
+    form_fields = ['prob']
+    pass
 
 class ResultsWaitPage(WaitPage):
 
@@ -25,6 +29,7 @@ class Results(Page):
 
 page_sequence = [
     Instructions,
+    Probability,
     MyPage,
     ResultsWaitPage,
     Results

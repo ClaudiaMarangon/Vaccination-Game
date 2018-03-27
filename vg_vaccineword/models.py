@@ -50,6 +50,11 @@ class Player(BasePlayer):
        # else:
         #    return 'Active'
 
+    prob = models.FloatField(
+        max = 22,
+        min = 0,
+    )
+
     g1_choice = models.StringField(
         choices=['Cooperate','Defect'],
         widget=widgets.RadioSelect

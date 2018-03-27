@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Game with Two Players
+{% endblock %}
+
+{% block content %}
+
+    <p>You have been allocated in the role of: <b>{{ player.role }}</b></p>
+
+    <p>
+        You will now play 10 rounds as  <b>{{ my_role }}</b>. For every round, you will be randomly paired with a
+        different  <b>{{ other_role }}</b>, such that you will never play two rounds in a row with the same partner.
+        After 10 rounds, you will play another game for 30 more rounds.
+    </p>
+
+    {% next_button %}
+
+{% endblock %}

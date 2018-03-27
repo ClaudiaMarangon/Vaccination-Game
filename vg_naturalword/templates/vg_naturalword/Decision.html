@@ -2,7 +2,7 @@
 {% load staticfiles otree %}
 
 {% block title %}
-    Cooperate or not?
+    Round {{ round }}
 {% endblock %}
 
 {% block styles %}
@@ -20,6 +20,8 @@
 {% endblock %}
 
 {% block content %}
+    <p>You have been allocated in the role of: <b>{{ player.role }}</b></p>
+
 
     <p>
         The payoffs for you and your partner are shown in the table below. Now pick whether you wish to perform the task
@@ -33,22 +35,21 @@
                 <th colspan="2">Your Partner</th>
             </tr>
             <tr>
-                <th>Cooperate</th>
-                <th>Defect</th>
+                <th>Choice 1</th>
+                <th>Choice 2</th>
             </tr>
             <tr class="highlight-row-on-hover">
                 <th rowspan="2" style="vertical-align: middle">You</th>
-                <td><button name="g1_choice" value="Cooperate" class="btn btn-primary btn-large">I will cooperate</button></td>
+                <td><button name="g1_choice" value="Choice 1" class="btn btn-primary btn-large">Choice 1</button></td>
                 <td>{{ Constants.vac_pay}}, {{ Constants.vac_pay}}</td>
                 <td>{{ Constants.vac_pay}}, {{ Constants.expl}}</td>
             </tr>
             <tr class="highlight-row-on-hover">
-                <td><button name="g1_choice" value="Defect" class="btn btn-primary btn-large">I will not cooperate</button></td>
+                <td><button name="g1_choice" value="Choice 2" class="btn btn-primary btn-large">Choice 2</button></td>
                 <td>{{ Constants.expl}}, {{ Constants.vac_pay}}</td>
                 <td>{{ Constants.no_vac}}, {{ Constants.no_vac}}</td>
             </tr>
         </table>
     </div>
 
-    {% next_button %}
 {% endblock %}

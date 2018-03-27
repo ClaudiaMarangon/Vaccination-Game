@@ -8,6 +8,11 @@ class Instructions(Page):
         return self.round_number==1
     pass
 
+class Probability(Page):
+    form_model = models.Player
+    form_fields = ['prob']
+    pass
+
 
 class MyPage(Page):
     pass
@@ -24,6 +29,8 @@ class Results(Page):
 
 
 page_sequence = [
+    Instructions,
+    Probability,
     MyPage,
     ResultsWaitPage,
     Results

@@ -74,9 +74,9 @@ class Results_p(Page):
 
 
 page_sequence = [
-    Probability,
     Decision,
     Decision_2,
+    Probability,
     Decision_p,
     ResultsWaitPage,
     Results,

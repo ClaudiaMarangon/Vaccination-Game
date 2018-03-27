@@ -59,8 +59,7 @@ class Group(BaseGroup):
 class Player(BasePlayer):
 
     prob = models.FloatField(
-        verbose_name = 'Please, enter your guess for the probability:',
-        max = 100,
+        max = 22,
         min = 0,
     )
 
