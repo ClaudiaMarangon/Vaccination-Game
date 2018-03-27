@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Disease Outbreak
+{% endblock %}
+
+{% block content %}
+    <p>
+        Italy will be affected by an outbreak of a severe and highly infectious new form of measles. Studies show that
+        around two third of those infected will die. Almost all of the survivors are expected to report some long-term
+        sequelae such as febrile convulsions, pneumonia and serious brain complication. Scientists at Italian Ministry of
+        Health recently developed a vaccine that fully protects citizens from this virus. Among those who receive the
+        vaccine a small number are expected to experience mild problems (local rash and swelling), a very small proportions
+        are expected to experience moderate problems (febrile convulsions), whereas very severe complications such as
+        coma and permanent brain damage will be extremely rare. The vaccination will be provided to those who want it for free.
+    </p>
+
+    <p>
+        Player C cannot be vaccinated, therefore his/her level of protection from infection and well-being
+        depends on your actions.
+    </p>
+    {% next_button %}
+
+{% endblock %}

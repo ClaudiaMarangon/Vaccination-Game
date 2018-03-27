@@ -119,6 +119,42 @@ SESSION_CONFIGS = [
             'vg_naturalword_3',
         ],
     },
+
+    {
+        'name': 'vg_vaccineword',
+        'display_name': "Vaccination Game - Vaccination Wording",
+        'num_demo_participants': 2,
+        'app_sequence': [
+            'vg_vaccineword',
+        ],
+    },
+
+    {
+        'name': 'vg_vaccineword_3',
+        'display_name': "Vaccination Game - Vaccination Wording 3 Players",
+        'num_demo_participants': 3,
+        'app_sequence': [
+            'vg_vaccineword_3',
+        ],
+    },
+
+    {
+        'name': 'vg_vaccinewordhigh',
+        'display_name': "Vaccination Game - Vaccination Wording High Details",
+        'num_demo_participants': 3,
+        'app_sequence': [
+            'vg_vaccinewordhigh',
+        ],
+    },
+
+    {
+        'name': 'vg_vaccinewordlow',
+        'display_name': "Vaccination Game - Vaccination Wording Low Details",
+        'num_demo_participants': 3,
+        'app_sequence': [
+            'vg_vaccinewordlow',
+        ],
+    },
 ]
 
 # anything you put after the below line will override
