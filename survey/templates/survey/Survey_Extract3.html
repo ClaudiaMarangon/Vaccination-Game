@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Survey Extract - Part 3
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Please rank the sources of information you use to make decisions regarding vaccinations from highest (1) to lowest (6).
+    </p>
+
+    {% for field in form %}
+        {% formfield field %}
+    {% endfor %}
+
+    {% next_button %}
+
+{% endblock %}

@@ -1,0 +1,165 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Survey Extract - Part 1
+{% endblock %}
+
+{% block styles %}
+<link href="{% static "survey/jquery-ui/jquery-ui.min.css" %}" rel="stylesheet">
+<style type="text/css">
+    .bid-slider {
+        margin: 1.5em auto;
+        width: 70%;
+    }
+
+    .bid {
+        text-align: center;
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        A vaccination exists to protect you and your loved ones from this outbreak. Below, we ask you a few questions
+        regarding the vaccine.
+    </p>
+
+        <div class="form-group required">
+        <label class="control-label" for="id_bid_amount">
+            Would you get vaccinated to protect yourself from the risks associated with an outbreak such as this?  <br>
+(Response scale: 0 = definitely not, 100=definitely yes)
+</label>
+        <div class="controls">
+            <input type="hidden" name="q4" id="id_bid_amount" value="0">
+            <div class="bid-slider1"></div>
+            <div class="bid">Your answer: <strong><span class="bid-value1"></span></strong></div>
+        </div>
+    </div>
+
+    {% formfield player.q5 %}
+
+            <div class="form-group required">
+        <label class="control-label" for="id_bid_amount2">
+            How severe do you believe the adverse effects of the vaccine described in the prompt are?  <br>
+(Response scale: 0 = not severe at all, 100 = extremely severe)
+</label>
+        <div class="controls">
+            <input type="hidden" name="q6" id="id_bid_amount2" value="0">
+            <div class="bid-slider2"></div>
+            <div class="bid">Your answer: <strong><span class="bid-value2"></span></strong></div>
+        </div>
+    </div>
+
+                <div class="form-group required">
+        <label class="control-label" for="id_bid_amount3">
+            How likely is it that you will be adversely affected by the vaccine described in the prompt? <br>
+(Response scale: 0 = no chance at all, 100 = certain)
+</label>
+        <div class="controls">
+            <input type="hidden" name="q7" id="id_bid_amount3" value="0">
+            <div class="bid-slider3"></div>
+            <div class="bid">Your answer: <strong><span class="bid-value3"></span></strong></div>
+        </div>
+    </div>
+
+                    <div class="form-group required">
+        <label class="control-label" for="id_bid_amount4">
+            To what extent do you believe that vaccinating yourself would help stop the spread of this outbreak and benefit your community? <br>
+(Response scale: 0 = not at all, 100 = A great deal)
+</label>
+        <div class="controls">
+            <input type="hidden" name="q8" id="id_bid_amount4" value="0">
+            <div class="bid-slider4"></div>
+            <div class="bid">Your answer: <strong><span class="bid-value4"></span></strong></div>
+        </div>
+    </div>
+
+
+    {% next_button %}
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static "survey/jquery-ui/jquery-ui.min.js" %}"></script>
+<script>
+jQuery(document).ready(function ($) {
+    var input = $('#id_bid_amount');
+
+    $('.bid-slider1').slider({
+        min: 0,
+        max: 100,
+        slide: function (event, ui) {
+            input.val(ui.value);
+            updateBidValue1();
+        },
+    });
+
+    function updateBidValue1() {
+        $('.bid-value1').text(input.val());
+    }
+
+    updateBidValue1();
+});
+
+jQuery(document).ready(function ($) {
+    var input = $('#id_bid_amount2');
+
+    $('.bid-slider2').slider({
+        min: 0,
+        max: 100,
+        slide: function (event, ui) {
+            input.val(ui.value);
+            updateBidValue2();
+        },
+    });
+
+    function updateBidValue2() {
+        $('.bid-value2').text(input.val());
+    }
+
+    updateBidValue2();
+});
+
+jQuery(document).ready(function ($) {
+    var input = $('#id_bid_amount3');
+
+    $('.bid-slider3').slider({
+        min: 0,
+        max: 100,
+        slide: function (event, ui) {
+            input.val(ui.value);
+            updateBidValue3();
+        },
+    });
+
+    function updateBidValue3() {
+        $('.bid-value3').text(input.val());
+    }
+
+    updateBidValue3();
+});
+
+jQuery(document).ready(function ($) {
+    var input = $('#id_bid_amount4');
+
+    $('.bid-slider4').slider({
+        min: 0,
+        max: 100,
+        slide: function (event, ui) {
+            input.val(ui.value);
+            updateBidValue4();
+        },
+    });
+
+    function updateBidValue4() {
+        $('.bid-value4').text(input.val());
+    }
+
+    updateBidValue4();
+});
+
+</script>
+{% endblock %}

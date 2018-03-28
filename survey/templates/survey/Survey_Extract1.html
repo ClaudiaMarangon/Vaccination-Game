@@ -1,0 +1,98 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Survey Extract - Part 1
+{% endblock %}
+
+{% block styles %}
+<link href="{% static "survey/jquery-ui/jquery-ui.min.css" %}" rel="stylesheet">
+<style type="text/css">
+    .bid-slider {
+        margin: 1.5em auto;
+        width: 70%;
+    }
+
+    .bid {
+        text-align: center;
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+        <div class="form-group required">
+        <label class="control-label" for="id_bid_amount">
+            If there was no opportunity to get vaccinated, how much risk of getting infected would an outbreak like this pose for your community? <br>
+(Response Scale: 0 = No risk at all, 100 = Extreme risk)
+</label>
+        <div class="controls">
+            <input type="hidden" name="q1" id="id_bid_amount" value="0">
+            <div class="bid-slider1"></div>
+            <div class="bid">Your answer: <strong><span class="bid-value1"></span></strong></div>
+        </div>
+    </div>
+
+            <div class="form-group required">
+        <label class="control-label" for="id_bid_amount1">
+            If there was no opportunity to get vaccinated, how much risk of getting the disease do you believe that an outbreak like this would pose for you personally <br>
+(Response Scale: 0 = No risk at all, 100 = Extreme risk)
+</label>
+        <div class="controls">
+            <input type="hidden" name="q2" id="id_bid_amount1" value="0">
+            <div class="bid-slider2"></div>
+            <div class="bid">Your answer: <strong><span class="bid-value2"></span></strong></div>
+        </div>
+    </div>
+
+    {% formfield player.q3 %}
+
+
+    {% next_button %}
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static "survey/jquery-ui/jquery-ui.min.js" %}"></script>
+<script>
+jQuery(document).ready(function ($) {
+    var input = $('#id_bid_amount');
+
+    $('.bid-slider1').slider({
+        min: 0,
+        max: 100,
+        slide: function (event, ui) {
+            input.val(ui.value);
+            updateBidValue();
+        }
+    });
+
+    function updateBidValue() {
+        $('.bid-value1').text(input.val());
+    }
+
+    updateBidValue();
+});
+
+jQuery(document).ready(function ($) {
+    var input = $('#id_bid_amount1');
+
+    $('.bid-slider2').slider({
+        min: 0,
+        max: 100,
+        slide: function (event, ui) {
+            input.val(ui.value);
+            updateBidValue1();
+        }
+    });
+
+    function updateBidValue1() {
+        $('.bid-value2').text(input.val());
+    }
+
+    updateBidValue1();
+});
+
+</script>
+{% endblock %}
