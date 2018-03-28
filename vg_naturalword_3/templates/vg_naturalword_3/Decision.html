@@ -2,7 +2,7 @@
 {% load staticfiles otree %}
 
 {% block title %}
-    Cooperate or not?
+    Round {{ round }}
 {% endblock %}
 
 {% block styles %}
@@ -21,6 +21,8 @@
 
 {% block content %}
 
+     <p>You have been allocated in the role of: <b>{{ player.role }}</b></p>
+
     <p>
         The payoffs for you and your partner are shown in the table below. Now pick whether you wish to perform the task
         or not:
@@ -30,25 +32,24 @@
         <table class="table table-bordered text-center" style="width: auto; margin: auto">
             <tr>
                 <th colspan="2" rowspan="2"></th>
-                <th colspan="2">Your Partner</th>
+                <th colspan="2">Player B</th>
             </tr>
             <tr>
-                <th>Cooperate</th>
-                <th>Defect</th>
+                <th>Choice 1</th>
+                <th>Choice 2</th>
             </tr>
             <tr class="highlight-row-on-hover">
-                <th rowspan="2" style="vertical-align: middle">You</th>
-                <td><button name="choice_act1" value="Cooperate" class="btn btn-primary btn-large">I will cooperate</button></td>
+                <th rowspan="2" style="vertical-align: middle">Player A</th>
+                <td><button name="choice_act1" value="Choice 1" class="btn btn-primary btn-large">Choice 1</button></td>
                 <td>{{ Constants.vac_pay}}, {{ Constants.vac_pay}}, {{ Constants.vac_pay}}</td>
                 <td>{{ Constants.vac_novac}}, {{ Constants.expl}}, {{ Constants.vac_novac}}</td>
             </tr>
             <tr class="highlight-row-on-hover">
-                <td><button name="choice_act1" value="Defect" class="btn btn-primary btn-large">I will not cooperate</button></td>
+                <td><button name="choice_act1" value="Choice 2" class="btn btn-primary btn-large">Choice 2</button></td>
                 <td>{{ Constants.expl}}, {{ Constants.vac_pay}}, {{ Constants.vac_pay}}</td>
                 <td>{{ Constants.no_vac}}, {{ Constants.no_vac}}, {{ Constants.no_vac_pp}}</td>
             </tr>
         </table>
     </div>
 
-    {% next_button %}
 {% endblock %}

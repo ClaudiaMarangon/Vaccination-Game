@@ -2,7 +2,7 @@
 {% load staticfiles otree %}
 
 {% block title %}
-    Game with Two Players
+    Two Players Game
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,8 @@
     <p>
         You will now play 10 rounds as  <b>{{ my_role }}</b>. For every round, you will be randomly paired with a
         different  <b>{{ other_role }}</b>, such that you will never play two rounds in a row with the same partner.
-        After 10 rounds, you will play another game for 30 more rounds.
+        After 10 rounds, you will play another game for 30 more rounds. . At the end of the experiment, you will be paid
+        based on some randomly selected choices you will have made in these rounds.
     </p>
 
     {% next_button %}

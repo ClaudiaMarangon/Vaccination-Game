@@ -23,6 +23,8 @@ class Role_alloc(Page):
             'other_role': self.player.other_player().role(),
         }
 
+    pass
+
 class Decision(Page):
     form_model = models.Player
     form_fields = ['g1_choice']

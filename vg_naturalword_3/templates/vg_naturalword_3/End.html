@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Congratulations!
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        You have reached the end of the second part of the experiment.
+    </p>
+
+    {% if elic %}
+        Your final payoff was selected from rounds {{ rand_r10 }}, {{ rand_r20 }}, {{ rand_r30 }} of the action guessing part of the game, and it is {{ participant.payoff }}
+    {% else %}
+        Your final payoff was selected from rounds {{ rand_r10 }}, {{ rand_r20 }}, {{ rand_r30 }} of the 2x2 part of the game, and it is {{ participant.payoff }}
+    {% endif %}
+
+    {% next_button %}
+
+{% endblock %}
