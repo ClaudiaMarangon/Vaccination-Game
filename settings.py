@@ -155,6 +155,15 @@ SESSION_CONFIGS = [
             'vg_vaccinewordlow',
         ],
     },
+
+    {
+        'name': 'survey',
+        'display_name': "Survey",
+        'num_demo_participants': 1,
+        'app_sequence': [
+            'survey',
+        ],
+    },
 ]
 
 # anything you put after the below line will override

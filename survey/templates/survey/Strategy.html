@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Strategy Justification
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Please give a brief description of why you made the choices you made throughout the games.
+    </p>
+
+    {% for field in form %}
+        {% formfield field %}
+    {% endfor %}
+
+    {% next_button %}
+
+{% endblock %}
