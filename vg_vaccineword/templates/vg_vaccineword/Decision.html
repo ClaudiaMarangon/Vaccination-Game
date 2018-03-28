@@ -24,7 +24,8 @@
 
 
     <p>
-        The payoffs for you and your partner are shown in the table below. Now pick either Choice 1 or 2:
+        The payoffs for you and your partner are shown in the table below. Now pick whether you wish to perform the task
+        or not:
     </p>
 
     <div class="form-group required">
@@ -34,17 +35,17 @@
                 <th colspan="2">Your Partner</th>
             </tr>
             <tr>
-                <th>Choice 1</th>
-                <th>Choice 2</th>
+                <th>Vaccinate</th>
+                <th>Don't</th>
             </tr>
             <tr class="highlight-row-on-hover">
                 <th rowspan="2" style="vertical-align: middle">You</th>
-                <td><button name="g1_choice" value="Choice 1" class="btn btn-primary btn-large">Choice 1</button></td>
+                <td><button name="g1_choice" value="Vaccinate" class="btn btn-primary btn-large">Vaccinate</button></td>
                 <td>{{ Constants.vac_pay}}, {{ Constants.vac_pay}}</td>
                 <td>{{ Constants.vac_pay}}, {{ Constants.expl}}</td>
             </tr>
             <tr class="highlight-row-on-hover">
-                <td><button name="g1_choice" value="Choice 2" class="btn btn-primary btn-large">Choice 2</button></td>
+                <td><button name="g1_choice" value="not Vaccinate" class="btn btn-primary btn-large">Don't</button></td>
                 <td>{{ Constants.expl}}, {{ Constants.vac_pay}}</td>
                 <td>{{ Constants.no_vac}}, {{ Constants.no_vac}}</td>
             </tr>

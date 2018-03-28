@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block styles %}
-<link href="{% static "vg_vaccineword/jquery-ui/jquery-ui.min.css" %}" rel="stylesheet">
+<link href="{% static "vg_vaccineword_3/jquery-ui/jquery-ui.min.css" %}" rel="stylesheet">
 <style type="text/css">
     .bid-slider {
         margin: 1.5em auto;
@@ -34,7 +34,7 @@
     </p>
 
     <p align="center">
-        <i>your payoff = 12 − |your guess − actual number of others playing Choice 1|</i>
+        <i>your payoff = 12 − |your guess − actual number of others playing Vaccinate|</i>
     </p>
 
     <div class="form-group required">
@@ -57,14 +57,14 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="{% static "vg_vaccineword/jquery-ui/jquery-ui.min.js" %}"></script>
+<script src="{% static "vg_vaccineword_3/jquery-ui/jquery-ui.min.js" %}"></script>
 <script>
 jQuery(document).ready(function ($) {
     var input = $('#id_bid_amount');
 
     $('.bid-slider').slider({
         min: 0,
-        max: 22,
+        max: 14,
         slide: function (event, ui) {
             input.val(ui.value);
             updateBidValue();
