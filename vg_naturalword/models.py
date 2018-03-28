@@ -86,6 +86,16 @@ class Player(BasePlayer):
 
         self.payoff = payoff_matrix[self.g1_choice][self.other_player().g1_choice]
 
+    def display_n(self):
+        if self.g1_choice == 'Choice 1' and self.other_player().g1_choice == 'Choice 1':
+            n = 2
+        elif self.g1_choice == 'Choice 1' or self.other_player().g1_choice == 'Choice 1':
+            n = 1
+        else:
+            n = 0
+
+        return self.subsession.choice1() - n
+
     def set_payoff_elic(self):
 
         if self.g1_choice == 'Choice 1' and self.other_player().g1_choice == 'Choice 1':

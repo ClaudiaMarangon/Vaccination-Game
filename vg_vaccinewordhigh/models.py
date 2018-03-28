@@ -147,5 +147,15 @@ class Player(BasePlayer):
         else:
             self.elic_pay = 0
 
+    def display_n(self):
+        if self.g1_choice == 'Choice 1' and self.other_player().g1_choice == 'Choice 1':
+            n = 2
+        elif self.g1_choice == 'Choice 1' or self.other_player().g1_choice == 'Choice 1':
+            n = 1
+        else:
+            n = 0
+
+        return self.subsession.choice1() - n
+
 
 pass

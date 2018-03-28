@@ -16,7 +16,7 @@
     {% endif %}
 
     <p>
-        Your guess was {{ player.prob|floatformat:0 }}, and in reality {{ subsession.choice1 }} player actually chose <b>Choice 1</b>.
+        Your guess was {{ player.prob|floatformat:0 }}, and in reality {{ player.display_n }} player actually chose <b>Choice 1</b>.
         Therefore, your payoff from the belief elicitation is {{ player.elic_pay|floatformat:0 }} tokens.
     </p>
 
