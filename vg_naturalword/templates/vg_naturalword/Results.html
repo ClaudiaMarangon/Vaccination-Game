@@ -7,9 +7,9 @@
 
 {% block content %}
     {% if same_dec %}
-        You both chose {{ my_dec }}, therefore your payoff is {{ player.payoff }}.
+        You both chose {{ my_dec }}, therefore your payoff is {{ player.payoff }} tokensw.
     {% else %}
-        You chose {{ my_dec }} while your partner chose {{ other_dec }}, therefore your payoff is {{ player.payoff }}.
+        You chose {{ my_dec }} while your partner chose {{ other_dec }}, therefore your payoff is {{ player.payoff }} tokens.
     {% endif %}
 
     <p>

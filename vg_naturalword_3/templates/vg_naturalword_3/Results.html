@@ -8,11 +8,11 @@
 {% block content %}
 
     {% if same_dec%}
-        You both chose {{ act1_c }}, therefore your payoff is {{ player.payoff }}.
+        You both chose {{ act1_c }}, therefore your payoff is {{ player.payoff }} tokens.
     {% elif diff_dec and act1 %}
-        You chose {{ act1_c }} while your partner chose {{ act2_c }}, therefore your payoff is {{ player.payoff }}.
+        You chose {{ act1_c }} while your partner chose {{ act2_c }}, therefore your payoff is {{ player.payoff }} tokens.
     {% elif diff_dec and act2 %}
-        You chose {{ act2_c }} while your partner chose {{ act1_c }}, therefore your payoff is {{ player.payoff }}.
+        You chose {{ act2_c }} while your partner chose {{ act1_c }}, therefore your payoff is {{ player.payoff }} tokens.
     {% endif %}
 
     <p>

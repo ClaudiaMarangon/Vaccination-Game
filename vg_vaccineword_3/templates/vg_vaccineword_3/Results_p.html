@@ -8,9 +8,9 @@
 {% block content %}
 
     {% if same_dec%}
-        Both the other player chose to {{ act1_c }}, therefore your payoff is {{ player.payoff }}.
+        Both the other player chose to {{ act1_c }}, therefore your payoff is {{ player.payoff }} tokens.
     {% else %}
-        Player A chose to {{ act1_c }} while Player B chose to {{ act2_c }}, therefore your payoff is {{ player.payoff }}.
+        Player A chose to {{ act1_c }} while Player B chose to {{ act2_c }}, therefore your payoff is {{ player.payoff }} tokens.
     {% endif %}
 
     <p>
