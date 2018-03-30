@@ -149,9 +149,9 @@ class Player(BasePlayer):
             self.elic_pay = 0
 
     def display_n(self):
-        if self.g1_choice == 'Choice 1' and self.other_player().g1_choice == 'Choice 1':
+        if self.group.choice_act1 == 'Choice 1' and self.group.choice_act2 == 'Choice 1':
             n = 2
-        elif self.g1_choice == 'Choice 1' or self.other_player().g1_choice == 'Choice 1':
+        elif self.group.choice_act1 == 'Choice 1' or self.group.choice_act2 == 'Choice 1':
             n = 1
         else:
             n = 0
