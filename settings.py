@@ -140,10 +140,19 @@ SESSION_CONFIGS = [
 
     {
         'name': 'vg_vaccinewordhigh',
-        'display_name': "Vaccination Game - Vaccination Wording High Details",
+        'display_name': "Vaccination Game - Vaccination Wording High Details, 3 Players",
         'num_demo_participants': 3,
         'app_sequence': [
             'vg_vaccinewordhigh',
+        ],
+    },
+
+    {
+        'name': 'vg_vaccinewordhigh_2',
+        'display_name': "Vaccination Game - Vaccination Wording High Details, 2 Players",
+        'num_demo_participants': 2,
+        'app_sequence': [
+            'vg_vaccinewordhigh_2',
         ],
     },
 
@@ -214,7 +223,7 @@ SESSION_CONFIGS = [
         'num_demo_participants': 2,
         'app_sequence': [
             'vg_naturalword',
-            'vg_vaccineword',
+            'vg_vaccinewordhigh_2',
             'survey',
         ],
     },

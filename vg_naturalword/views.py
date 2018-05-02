@@ -37,9 +37,14 @@ class Decision(Page):
 
 class ResultsWaitPage(WaitPage):
 
+
     def after_all_players_arrive(self):
+
         for p in self.group.get_players():
+            if p.round_number==1:
+                p.participant.vars['total_p'] = 0
             p.set_payoff()
+            p.participant.vars['total_p'] = p.participant.vars['total_p'] + p.payoff
 
         pass
 
@@ -56,13 +61,14 @@ class ResultsWaitPage2(WaitPage):
 class Results(Page):
 
     def before_next_page(self):
+
         if self.player.round_number == self.player.participant.vars['rand_numb'] and self.player.participant.vars['rand_game'] == 1:
             self.player.participant.vars['2p_pay'] = self.player.payoff
         elif self.player.round_number == self.player.participant.vars['rand_numb'] and self.player.participant.vars['rand_game'] == 2:
             self.player.participant.vars['2p_pay'] = self.player.elic_pay
 
-        if self.round_number == 4:
-            self.participant.payoff = self.player.participant.vars['2p_pay']
+        if self.player.round_number == 4:
+            self.participant.payoff = self.participant.payoff - self.player.participant.vars['total_p'] + self.player.participant.vars['2p_pay']
 
     def vars_for_template(self):
         return {

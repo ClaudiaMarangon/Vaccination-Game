@@ -14,7 +14,7 @@ Your app description
 class Constants(BaseConstants):
     name_in_url = 'vg_naturalword_3'
     players_per_group = 3
-    num_rounds = 6
+    num_rounds = 3
     vac_pay = c(5)
     expl = c(8)
     no_vac = c(2)
@@ -29,9 +29,7 @@ class Subsession(BaseSubsession):
 
         if self.round_number==1:
             for p in self.get_players():
-                p.participant.vars['rand_numb10'] = random.randint(1, 2)
-                p.participant.vars['rand_numb20'] = random.randint(3, 4)
-                p.participant.vars['rand_numb30'] = random.randint(5, 6)
+                p.participant.vars['rand_numb'] = random.randint(1, 4)
                 p.participant.vars['rand_game'] = random.randint(1, 2)
 
         for g in self.get_groups():
