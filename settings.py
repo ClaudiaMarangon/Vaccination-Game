@@ -164,6 +164,60 @@ SESSION_CONFIGS = [
             'survey',
         ],
     },
+    {
+        'name': 'session_one',
+        'display_name': "Session 1 - 3rd May",
+        'num_demo_participants': 3,
+        'app_sequence': [
+            'vg_naturalword_3',
+            'vg_vaccineword_3',
+            'survey',
+        ],
+    },
+
+    {
+        'name': 'session_two',
+        'display_name': "Session 2 - 3rd May",
+        'num_demo_participants': 3,
+        'app_sequence': [
+            'vg_naturalword_3',
+            'vg_vaccinewordhigh',
+            'survey',
+        ],
+    },
+
+    {
+        'name': 'session_three',
+        'display_name': "Session 3 - 3rd May",
+        'num_demo_participants': 3,
+        'app_sequence': [
+            'vg_naturalword_3',
+            'vg_vaccinewordlow',
+            'survey',
+        ],
+    },
+
+    {
+        'name': 'session_4',
+        'display_name': "Session 4 - 3rd May",
+        'num_demo_participants': 2,
+        'app_sequence': [
+            'vg_naturalword',
+            'vg_vaccineword',
+            'survey',
+        ],
+    },
+
+    {
+        'name': 'session_5',
+        'display_name': "Session 5 - 3rd May",
+        'num_demo_participants': 2,
+        'app_sequence': [
+            'vg_naturalword',
+            'vg_vaccineword',
+            'survey',
+        ],
+    },
 ]
 
 # anything you put after the below line will override

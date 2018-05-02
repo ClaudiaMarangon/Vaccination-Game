@@ -12,10 +12,6 @@
         You chose {{ my_dec }} while your partner chose {{ other_dec }}, therefore your payoff is {{ player.payoff }} tokens.
     {% endif %}
 
-    <p>
-        Your guess was {{ player.prob|floatformat:0 }}, and in reality {{ player.display_n }} player actually chose <b>Choice 1</b>.
-        Therefore, your payoff from the belief elicitation is {{ player.elic_pay|floatformat:0 }} tokens.
-    </p>
     {% next_button %}
 
 {% endblock %}

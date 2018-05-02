@@ -15,11 +15,6 @@
         You chose to {{ act2_c }} while your partner chose to {{ act1_c }}, therefore your payoff is {{ player.payoff }} tokens.
     {% endif %}
 
-    <p>
-        Your guess was {{ player.prob|floatformat:0 }}, and in reality {{ player.display_n }} player actually chose to <b>Vaccinate</b>.
-        Therefore, your payoff from the belief elicitation is {{ player.elic_pay|floatformat:0 }} tokens.
-    </p>
-
     {% next_button %}
 {% endblock %}
 
