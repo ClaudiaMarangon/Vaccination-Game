@@ -49,7 +49,7 @@ class Group(BaseGroup):
 class Player(BasePlayer):
 
     prob = models.FloatField(
-        max = 22,
+        max = 26,
         min = 0,
     )
 
