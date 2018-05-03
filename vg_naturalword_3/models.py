@@ -33,13 +33,13 @@ class Subsession(BaseSubsession):
                 p.participant.vars['rand_game'] = random.randint(1, 2)
 
         for g in self.get_groups():
-            if self.round_number<=2: #for the first 10 rounds P2 is Player C and P3 is Player A
+            if self.round_number<=3: #for the first 10 rounds P2 is Player C and P3 is Player A
                 g.pass_p1 = 2
                 g.act1 = 3
-            elif self.round_number>2 and self.round_number<=4: #for the second 10 rounds P3 is Player C and P1 is Player A
+            elif self.round_number>3 and self.round_number<=6: #for the second 10 rounds P3 is Player C and P1 is Player A
                 g.pass_p1 = 3
                 g.act1 = 1
-            elif self.round_number>4: #for the last 10 rounds P1 is Player C and P2 is Player A
+            elif self.round_number>6: #for the last 10 rounds P1 is Player C and P2 is Player A
                 g.pass_p1 = 1
                 g.act1 = 2
 

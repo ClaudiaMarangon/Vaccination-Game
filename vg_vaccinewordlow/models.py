@@ -13,7 +13,7 @@ Your app description
 
 class Constants(BaseConstants):
     name_in_url = 'vg_vaccinewordlow'
-    players_per_group = None
+    players_per_group = 3
     num_rounds = 30
     vac_pay = c(5)
     expl = c(8)

@@ -39,6 +39,7 @@ class Decision(Page):
     pass
 
 class Decision_2(Page):
+
     def is_displayed(self):
         return self.player.role() == 'Player B'
     form_model = models.Group
@@ -49,6 +50,7 @@ class Decision_2(Page):
         }
 
     pass
+
 
 class Decision_p(Page):
     def is_displayed(self):
@@ -75,6 +77,7 @@ class ResultsWaitPage(WaitPage):
         pass
 
 
+
 class ResultsWaitPage2(WaitPage):
     wait_for_all_groups = True
 
@@ -83,6 +86,7 @@ class ResultsWaitPage2(WaitPage):
             p.set_payoff_elic()
 
         pass
+
 
 
 class Results(Page):
