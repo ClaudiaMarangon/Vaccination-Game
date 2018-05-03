@@ -26,6 +26,14 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
+    code = models.IntegerField(
+        verbose_name='Please, enter the last code that you received after the survey:',
+    )
+
+    uni_id = models.IntegerField(
+        verbose_name='Please, enter your University ID:',
+    )
+
     two_p = models.TextField(
         verbose_name = '[Two-players Game - Max. 150 characters, must not be left blank]',
         max_length = 150

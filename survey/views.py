@@ -6,7 +6,7 @@ from .models import Constants
 
 class Strategy(Page):
     form_model = models.Player
-    form_fields = ['two_p', 'three_p']
+    form_fields = ['code', 'uni_id', 'two_p', 'three_p']
     pass
 
 class Survey_Extract1(Page):
