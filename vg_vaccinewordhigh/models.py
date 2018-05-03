@@ -14,7 +14,7 @@ Your app description
 class Constants(BaseConstants):
     name_in_url = 'vg_vaccinewordhigh'
     players_per_group = None
-    num_rounds = 6
+    num_rounds = 30
     vac_pay = c(5)
     expl = c(8)
     no_vac = c(2)
@@ -28,19 +28,19 @@ class Subsession(BaseSubsession):
 
         if self.round_number == 1:
             for p in self.get_players():
-                p.participant.vars['rand_numb10'] = random.randint(1, 2)
-                p.participant.vars['rand_numb20'] = random.randint(3, 4)
-                p.participant.vars['rand_numb30'] = random.randint(5, 6)
+                p.participant.vars['rand_numb10'] = random.randint(1, 10)
+                p.participant.vars['rand_numb20'] = random.randint(11, 20)
+                p.participant.vars['rand_numb30'] = random.randint(21, 30)
                 p.participant.vars['rand_game'] = random.randint(1, 2)
 
         for g in self.get_groups():
-            if self.round_number <= 2:  # for the first 10 rounds P2 is Player C and P3 is Player A
+            if self.round_number <= 10:  # for the first 10 rounds P2 is Player C and P3 is Player A
                 g.pass_p1 = 2
                 g.act1 = 3
-            elif self.round_number > 2 and self.round_number <= 4:  # for the second 10 rounds P3 is Player C and P1 is Player A
+            elif self.round_number > 10 and self.round_number <= 20:  # for the second 10 rounds P3 is Player C and P1 is Player A
                 g.pass_p1 = 3
                 g.act1 = 1
-            elif self.round_number > 4:  # for the last 10 rounds P1 is Player C and P2 is Player A
+            elif self.round_number > 20:  # for the last 10 rounds P1 is Player C and P2 is Player A
                 g.pass_p1 = 1
                 g.act1 = 2
 
