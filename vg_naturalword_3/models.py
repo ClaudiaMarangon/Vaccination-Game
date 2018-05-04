@@ -16,10 +16,11 @@ class Constants(BaseConstants):
     players_per_group = 3
     num_rounds = 10
     vac_pay = c(5)
-    expl = c(8)
+    expl = c(10)
     no_vac = c(2)
     no_vac_pp = c(0)
-    vac_novac = c(4)
+    vac_novac = c(5)
+    vac_novac_pp = c(2)
 
 
 
@@ -111,11 +112,11 @@ class Player(BasePlayer):
             'Choice 1':
                 {
                     'Choice 1': Constants.vac_pay,
-                    'Choice 2': Constants.vac_novac
+                    'Choice 2': Constants.vac_novac_pp
                 },
             'Choice 2':
                 {
-                    'Choice 1': Constants.vac_novac,
+                    'Choice 1': Constants.vac_novac_pp,
                     'Choice 2': Constants.no_vac_pp
                 }
         }

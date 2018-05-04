@@ -16,10 +16,11 @@ class Constants(BaseConstants):
     players_per_group = 3
     num_rounds = 30
     vac_pay = c(5)
-    expl = c(8)
+    expl = c(10)
     no_vac = c(2)
     no_vac_pp = c(0)
-    vac_novac = c(4)
+    vac_novac = c(5)
+    vac_novac_pp = c(2)
 
 
 class Subsession(BaseSubsession):
@@ -110,11 +111,11 @@ class Player(BasePlayer):
             'Vaccinate':
                 {
                     'Vaccinate': Constants.vac_pay,
-                    'not Vaccinate': Constants.vac_novac
+                    'not Vaccinate': Constants.vac_novac_pp
                 },
             'not Vaccinate':
                 {
-                    'Vaccinate': Constants.vac_novac,
+                    'Vaccinate': Constants.vac_novac_pp,
                     'not Vaccinate': Constants.no_vac_pp
                 }
         }
