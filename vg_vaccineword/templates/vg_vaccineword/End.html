@@ -12,11 +12,11 @@
     </p>
 
     {% if elic %}
-        Your final payoff was selected from rounds {{ rand_r10 }}, {{ rand_r20 }} and {{ rand_r30 }} of the action guessing part of the game, and it is {{ participant.payoff }}
+        Your final payoff was selected from round {{ rand_r }} of the action guessing part of the game, and it is {{ participant.payoff }}
     {% else %}
-        Your final payoff was selected from rounds {{ rand_r10 }}, {{ rand_r20 }} and {{ rand_r30 }} of the 3x2 part of the game, and it is {{ participant.payoff }}
+        Your final payoff was selected from round {{ rand_r }} of the 2x2 part of the game, and it is {{ participant.payoff }}
     {% endif %}
 
     {% next_button %}
 
-{% endblock %}
+{% endblock

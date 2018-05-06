@@ -67,7 +67,7 @@ class Results(Page):
         elif self.player.round_number == self.player.participant.vars['rand_numb'] and self.player.participant.vars['rand_game'] == 2:
             self.player.participant.vars['2p_pay'] = self.player.elic_pay
 
-        if self.player.round_number == 10:
+        if self.player.round_number == 9:
             self.participant.payoff = self.participant.payoff - self.player.participant.vars['total_p'] + self.player.participant.vars['2p_pay']
 
     def vars_for_template(self):
@@ -82,7 +82,7 @@ class Results(Page):
 
 class End(Page):
     def is_displayed(self):
-        return self.round_number == 10
+        return self.round_number == 9
 
     def vars_for_template(self):
         return{

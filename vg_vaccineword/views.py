@@ -61,30 +61,13 @@ class ResultsWaitPage2(WaitPage):
 class Results(Page):
 
     def before_next_page(self):
-        if self.player.round_number == 1:
-            self.player.participant.vars['2p_pay'] = 0
 
-        if self.player.round_number<=10:
-            if self.player.round_number == self.player.participant.vars['rand_numb10'] and self.player.participant.vars['rand_game'] == 1:
-                self.player.participant.vars['2p_pay'] = self.player.participant.vars['2p_pay'] + self.player.payoff
-            elif self.player.round_number == self.player.participant.vars['rand_numb10'] and self.player.participant.vars['rand_game'] == 2:
-                self.player.participant.vars['2p_pay'] = self.player.participant.vars['2p_pay'] + self.player.elic_pay
+        if self.player.round_number == self.player.participant.vars['rand_numb'] and self.player.participant.vars['rand_game'] == 1:
+            self.player.participant.vars['2p_pay'] = self.player.payoff
+        elif self.player.round_number == self.player.participant.vars['rand_numb'] and self.player.participant.vars['rand_game'] == 2:
+            self.player.participant.vars['2p_pay'] = self.player.elic_pay
 
-        if self.player.round_number>10 and self.player.round_number<=20:
-            if self.player.round_number == self.player.participant.vars['rand_numb20'] and self.player.participant.vars['rand_game'] == 1:
-                self.player.participant.vars['2p_pay'] = self.player.participant.vars['2p_pay'] + self.player.payoff
-            elif self.player.round_number == self.player.participant.vars['rand_numb20'] and self.player.participant.vars['rand_game'] == 2:
-                self.player.participant.vars['2p_pay'] = self.player.participant.vars['2p_pay'] + self.player.elic_pay
-
-
-        if self.player.round_number>20 and self.player.round_number<=30:
-            if self.player.round_number == self.player.participant.vars['rand_numb30'] and self.player.participant.vars['rand_game'] == 1:
-                self.player.participant.vars['2p_pay'] = self.player.participant.vars['2p_pay'] + self.player.payoff
-            elif self.player.round_number == self.player.participant.vars['rand_numb30'] and self.player.participant.vars['rand_game'] == 2:
-                self.player.participant.vars['2p_pay'] = self.player.participant.vars['2p_pay'] + self.player.elic_pay
-
-
-        if self.player.round_number == 30:
+        if self.player.round_number == 9:
             self.participant.payoff = self.participant.payoff - self.player.participant.vars['total_p'] + self.player.participant.vars['2p_pay']
 
     def vars_for_template(self):
@@ -99,13 +82,11 @@ class Results(Page):
 
 class End(Page):
     def is_displayed(self):
-        return self.round_number == 30
+        return self.round_number == 9
 
     def vars_for_template(self):
         return{
-            'rand_r10': self.player.participant.vars['rand_numb10'],
-            'rand_r20': self.player.participant.vars['rand_numb20'],
-            'rand_r30': self.player.participant.vars['rand_numb30'],
+            'rand_r': self.player.participant.vars['rand_numb'],
             'elic': self.player.participant.vars['rand_game'] == 2,
         }
     pass
