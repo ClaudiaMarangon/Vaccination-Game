@@ -89,6 +89,7 @@ class End(Page):
             'rand_r': self.player.participant.vars['rand_numb'],
             'elic': self.player.participant.vars['rand_game'] == 2,
         }
+
     pass
 
 page_sequence = [
