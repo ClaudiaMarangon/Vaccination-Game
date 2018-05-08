@@ -187,8 +187,8 @@ SESSION_CONFIGS = [
         'display_name': "Session 1 - 8th May",
         'num_demo_participants': 6,
         'app_sequence': [
-            'vg_vaccinewordhigh_2',
-            'vg_vaccinewordhigh',
+            'vg_naturalword',
+            'vg_naturalword_3',
             'survey',
         ],
     },
@@ -200,39 +200,6 @@ SESSION_CONFIGS = [
         'app_sequence': [
             'vg_vaccinewordlow_2',
             'vg_vaccinewordlow',
-            'survey',
-        ],
-    },
-
-    {
-        'name': 'session_three',
-        'display_name': "Session 3 - 8th May",
-        'num_demo_participants': 6,
-        'app_sequence': [
-            'vg_naturalword',
-            'vg_naturalword_3',
-            'survey',
-        ],
-    },
-
-    {
-        'name': 'session_4',
-        'display_name': "Session 4 - 7th May",
-        'num_demo_participants': 3,
-        'app_sequence': [
-            'vg_naturalword_3',
-            'vg_vaccinewordlow',
-            'survey',
-        ],
-    },
-
-    {
-        'name': 'session_5',
-        'display_name': "Session 5 - 7th May",
-        'num_demo_participants': 3,
-        'app_sequence': [
-            'vg_naturalword_3',
-            'vg_vaccinewordhigh',
             'survey',
         ],
     },
