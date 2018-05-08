@@ -166,6 +166,15 @@ SESSION_CONFIGS = [
     },
 
     {
+        'name': 'vg_vaccinewordlow_2',
+        'display_name': "Vaccination Game - Vaccination Wording Low Details, 2 Players",
+        'num_demo_participants': 2,
+        'app_sequence': [
+            'vg_vaccinewordlow_2',
+        ],
+    },
+
+    {
         'name': 'survey',
         'display_name': "Survey",
         'num_demo_participants': 1,
