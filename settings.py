@@ -184,7 +184,7 @@ SESSION_CONFIGS = [
     },
     {
         'name': 'session_one',
-        'display_name': "Session 1 - 8th May",
+        'display_name': "Session 1 - 9th May",
         'num_demo_participants': 6,
         'app_sequence': [
             'vg_naturalword',
@@ -195,7 +195,7 @@ SESSION_CONFIGS = [
 
     {
         'name': 'session_two',
-        'display_name': "Session 2 - 8th May",
+        'display_name': "Session 2 - 9th May",
         'num_demo_participants': 6,
         'app_sequence': [
             'vg_vaccinewordlow_2',
