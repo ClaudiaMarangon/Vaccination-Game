@@ -189,7 +189,7 @@ SESSION_CONFIGS = [
         'display_name': "Session 2 - 8th May",
         'num_demo_participants': 6,
         'app_sequence': [
-            'vg_vaccinewordlow',
+            'vg_vaccinewordlow_2',
             'vg_vaccinewordlow',
             'survey',
         ],
