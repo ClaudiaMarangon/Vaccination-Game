@@ -218,10 +218,10 @@ SESSION_CONFIGS = [
     {
         'name': 'session_4',
         'display_name': "Session 4 - 7th May",
-        'num_demo_participants': 6,
+        'num_demo_participants': 3,
         'app_sequence': [
-            'vg_naturalword',
             'vg_naturalword_3',
+            'vg_vaccinewordlow',
             'survey',
         ],
     },
@@ -229,10 +229,10 @@ SESSION_CONFIGS = [
     {
         'name': 'session_5',
         'display_name': "Session 5 - 7th May",
-        'num_demo_participants': 6,
+        'num_demo_participants': 3,
         'app_sequence': [
-            'vg_vaccineword',
-            'vg_vaccineword_3',
+            'vg_naturalword_3',
+            'vg_vaccinewordhigh',
             'survey',
         ],
     },
